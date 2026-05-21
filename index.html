@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CareSync Hospital Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h2>CareSync</h2>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Patients</a></li>
+      <li><a href="#">Doctors</a></li>
+      <li><a href="#">Billing</a></li>
+    </ul>
+
+    <button id="modeBtn">Dark Mode</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1 id="title">CareSync Hospital Management</h1>
+      <p>Integrated Patient & Staff Management Core</p>
+
+      <button id="changeTextBtn">Change Title</button>
+      <button id="showBtn">Show/Hide Info</button>
+
+      <div id="extraInfo">
+        <p>Hospital open 24/7 for emergency service.</p>
+      </div>
+    </div>
+
+    <div class="weather-container">
+        <div class="cloud-card">
+            <h1 id="location">Chattogram</h1>
+            <h2 id="temperature">-- °C</h2>
+            <p id="description">Loading weather...</p>
+        </div>
+    </div>
+
+
+    <img src="hospital.jpg" alt="hospital">
+  </section>
+
+  <!-- CARD SECTION -->
+  <section class="cards">
+
+    <div class="card">
+      <h3>Patients</h3>
+      <p>Total Patients:</p>
+      <h2 id="counter">0</h2>
+
+      <button onclick="increaseCounter()">Add Patient</button>
+    </div>
+
+    <div class="card">
+      <h3>Doctors</h3>
+      <p>Manage doctor schedules easily.</p>
+    </div>
+
+    <div class="card">
+      <h3>Billing</h3>
+      <p>Track bills and payments digitally.</p>
+    </div>
+
+  </section>
+
+  <!-- LOGIN FORM -->
+  <section class="form-section">
+
+    <h2>Login</h2>
+
+    <form id="loginForm">
+
+      <input type="email" id="email" placeholder="Enter Email">
+
+      <input type="password" id="password" placeholder="Enter Password">
+
+      <!-- DROPDOWN -->
+      <select id="department">
+        <option value="">Select Department</option>
+        <option>Cardiology</option>
+        <option>Neurology</option>
+        <option>Emergency</option>
+      </select>
+
+      <!-- RADIO -->
+      <div class="radio-box">
+        <label>
+          <input type="radio" name="role" value="Doctor">
+          Doctor
+        </label>
+
+        <label>
+          <input type="radio" name="role" value="Patient">
+          Patient
+        </label>
+      </div>
+
+      <!-- CHECKBOX -->
+      <div class="check-box">
+        <label>
+          <input type="checkbox" id="agree">
+          Accept Terms
+        </label>
+      </div>
+
+      <button type="submit">Submit</button>
+
+      <button type="button" id="logoutBtn">Logout</button>
+
+      <p id="message"></p>
+
+    </form>
+
+  </section>
+
+  <!-- STORED USERS -->
+  <section class="stored-data">
+
+    <h2>Stored Users</h2>
+
+    <div id="userList"></div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 CareSync Hospital Management</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
