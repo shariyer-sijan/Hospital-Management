@@ -35,4 +35,4 @@ This project helps manage hospital-related activities like patient serial bookin
 ## Contributors
 
 - Shariyer Sijan
-- 
+- Sayed MD. Sayeed Awal
