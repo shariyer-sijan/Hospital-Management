@@ -181,3 +181,62 @@ function getWeatherStatus(code) {
 
 // পেজ লোড হলেই ফাংশনটি রান করবে
 getWeatherData();
+
+// DOCTOR AVAILABILITY
+
+function checkDoctor(){
+
+  let doctor =
+  document.getElementById("doctorSelect").value;
+
+  let result =
+  document.getElementById("doctorResult");
+
+  if(doctor === "Dr. Sijan"){
+
+    result.innerText =
+    "Dr. Sijan is Available Today";
+  }
+
+  else if(doctor === "Dr. Towfiq"){
+
+    result.innerText =
+    "Dr. Towfiq is Busy";
+  }
+  else if(doctor === "Dr. Awal"){
+
+    result.innerText =
+    "Dr. Awal is Busy";
+  }
+  else{
+
+    result.innerText =
+    "Dr. Zisan Available After 5 PM";
+  }
+
+}
+// SERIAL BOOKING
+
+let serial = 1;
+
+function getSerial(){
+
+  let name =
+  document.getElementById("patientName").value;
+
+  let result =
+  document.getElementById("serialResult");
+
+  if(name === ""){
+
+    result.innerText =
+    "Enter Patient Name";
+
+    return;
+  }
+
+  result.innerText =
+  name + ", Your Serial Number is: " + serial;
+
+  serial++;
+}
