@@ -70,6 +70,61 @@
     </div>
 
   </section>
+  <!-- DOCTOR CHECK -->
+
+<section class="cards">
+
+  <div class="card">
+
+    <h3>Doctor Availability</h3>
+
+    <select id="doctorSelect">
+
+      <option>Dr. Sijan</option>
+      <option>Dr. Towfiq</option>
+      <option>Dr. Awal</option>
+      <option>Dr. Zisan</option>
+
+    </select>
+
+    <br><br>
+
+    <button onclick="checkDoctor()">
+      Check Availability
+    </button>
+
+    <p id="doctorResult"></p>
+
+  </div>
+
+</section>
+
+<!-- SERIAL BOOKING -->
+
+<section class="cards">
+
+  <div class="card">
+
+    <h3>Patient Serial Booking</h3>
+
+    <input
+      type="text"
+      id="patientName"
+      placeholder="Enter Patient Name"
+    >
+
+    <br><br>
+
+    <button onclick="getSerial()">
+      Get Serial
+    </button>
+
+    <p id="serialResult"></p>
+
+  </div>
+
+</section>
+
 
   <!-- LOGIN FORM -->
   <section class="form-section">
