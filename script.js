@@ -211,18 +211,29 @@ function checkDoctor(){
   else{
 
     result.innerText =
-    "Dr. Zisan Available After 5 PM";
+    "Available After 5 PM";
   }
 
 }
-// SERIAL BOOKING
+// SEPARATE SERIAL FOR EACH DOCTOR
 
-let serial = 1;
+let doctorSerials = {
+
+  "Dr. Sijan": 1,
+  "Dr. Awal": 1,
+  "Dr. Towfiq": 1,
+  "Dr. Zisan": 1,
+  "Dr. Towhid": 1
+
+};
 
 function getSerial(){
 
   let name =
   document.getElementById("patientName").value;
+
+  let doctor =
+  document.getElementById("serialDoctor").value;
 
   let result =
   document.getElementById("serialResult");
@@ -235,8 +246,21 @@ function getSerial(){
     return;
   }
 
-  result.innerText =
-  name + ", Your Serial Number is: " + serial;
+  let currentSerial =
+  doctorSerials[doctor];
 
-  serial++;
+  result.innerText =
+
+  name +
+
+  ", Your Serial Number with " +
+
+  doctor +
+
+  " is: " +
+
+  currentSerial;
+
+  doctorSerials[doctor]++;
+
 }
